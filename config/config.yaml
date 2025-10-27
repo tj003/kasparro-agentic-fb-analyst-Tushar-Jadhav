@@ -1,0 +1,85 @@
+# Kasparro Agentic Facebook Analyst Configuration
+
+# API Configuration
+api:
+  provider: "groq"
+  model: "gemma2-9b-it"
+  temperature: 0.7
+  max_tokens: 2000
+  timeout: 30
+
+# Analysis Thresholds
+thresholds:
+  roas_low: 2.0              # ROAS below 2.0 is considered low
+  roas_high: 4.0              # ROAS above 4.0 is considered high
+  ctr_low: 0.02               # CTR below 2% is considered low
+  ctr_high: 0.05              # CTR above 5% is considered high
+  spend_high: 1000            # Campaigns spending > $1000 are high-budget
+  confidence_threshold: 0.6   # Minimum confidence for insights
+
+# Agent Configuration
+agents:
+  planner:
+    role: "Strategic Marketing Planner"
+    goal: "Decompose analysis requests into actionable tasks"
+    backstory: "Expert in marketing analytics with 10+ years experience breaking down complex business questions into data-driven analyses."
+    
+  data:
+    role: "Data Analyst"
+    goal: "Summarize dataset characteristics and identify patterns"
+    backstory: "Data scientist specializing in marketing performance metrics and statistical analysis."
+    
+  insight:
+    role: "Business Insight Specialist"
+    goal: "Hypothesize root causes for performance changes"
+    backstory: "Marketing consultant with expertise in diagnosing campaign performance issues and identifying optimization opportunities."
+    
+  evaluator:
+    role: "Quantitative Evaluator"
+    goal: "Validate hypotheses with data-driven metrics"
+    backstory: "Statistician focused on validating business hypotheses with rigorous quantitative analysis."
+    
+  creative:
+    role: "Creative Strategist"
+    goal: "Generate compelling ad creatives based on insights"
+    backstory: "Copywriter and creative strategist specializing in high-converting ad messaging for performance marketing."
+
+# Task Configuration
+tasks:
+  max_parallel: 3            # Maximum number of parallel tasks
+  reflection_enabled: true    # Enable reflection/retry for low confidence
+  retry_max: 2                # Maximum retry attempts
+  
+# Creative Generation
+creative:
+  num_suggestions: 5          # Number of creative suggestions per campaign
+  headline_max_length: 60
+  message_max_length: 200
+  focus_on_best_practices: true
+
+# Data Configuration
+data:
+  required_columns:
+    - campaign_name
+    - creative_message
+    - roas
+    - ctr
+    - spend
+    - impressions
+    - clicks
+    - date
+  date_format: "%Y-%m-%d"
+
+# Output Configuration
+output:
+  include_charts: false       # Set to true if chart generation is added
+  export_format: ["json", "md"]
+  verbose_logging: true
+
+# Logging
+logging:
+  level: "INFO"               # DEBUG, INFO, WARNING, ERROR
+  file: "logs/agent_logs.json"
+  console: true
+
+

@@ -1,0 +1,38 @@
+{
+  "hypotheses": [
+    {
+      "id": "hyp_1",
+      "title": "Creative Fatigue",
+      "description": "Ad creatives showing declining engagement over time",
+      "confidence": 0.75,
+      "evidence": [
+        "CTR dropped significantly over campaign duration"
+      ],
+      "severity": "high"
+    }
+  ],
+  "validated": {
+    "validated_hypotheses": [
+      {
+        "hypothesis_id": "hyp_1",
+        "title": "Creative Fatigue",
+        "validation_score": 0.7,
+        "metrics": {
+          "correlation": -0.3,
+          "p_value": 0.05,
+          "sample_size": 250,
+          "fatigue_indicator": true,
+          "ctr_drop": -0.0020228431066108173
+        },
+        "is_valid": true,
+        "strength": "medium"
+      }
+    ],
+    "validation_confidence": 0.7,
+    "recommendation": {
+      "action": "Refresh ad creatives with new messaging",
+      "priority": "medium",
+      "expected_impact": "+10-20% performance improvement"
+    }
+  }
+}

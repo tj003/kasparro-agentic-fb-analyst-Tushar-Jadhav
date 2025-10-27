@@ -1,0 +1,117 @@
+{
+  "start_time": "2025-10-27T13:50:30.008755",
+  "query": "Analyze ROAS drop",
+  "tasks": [
+    {
+      "id": "task_1",
+      "agent": "data_agent",
+      "description": "Summarize dataset",
+      "dependencies": []
+    },
+    {
+      "id": "task_2",
+      "agent": "insight_agent",
+      "description": "Generate hypotheses",
+      "dependencies": [
+        "task_1"
+      ]
+    },
+    {
+      "id": "task_3",
+      "agent": "evaluator_agent",
+      "description": "Validate with metrics",
+      "dependencies": [
+        "task_2"
+      ]
+    },
+    {
+      "id": "task_4",
+      "agent": "creative_agent",
+      "description": "Generate creative suggestions",
+      "dependencies": [
+        "task_3"
+      ]
+    }
+  ],
+  "results": {
+    "task_1": {
+      "total_campaigns": 5,
+      "total_records": 250,
+      "date_range": {
+        "start": "2024-01-01T00:00:00.000000000",
+        "end": "2024-12-31T00:00:00.000000000"
+      },
+      "metrics": {
+        "roas": {
+          "mean": 3.281235841760479,
+          "median": 3.265219283808005,
+          "std": 1.0268004523660919,
+          "min": 1.5267939562701098,
+          "max": 4.987137791147907
+        },
+        "ctr": {
+          "mean": 0.030184212127268857,
+          "median": 0.03143017522939745,
+          "std": 0.011954576992319532
+        },
+        "spend": {
+          "total": 66521.8823213512,
+          "mean": 266.0875292854048,
+          "median": 255.22099047774756
+        }
+      },
+      "patterns": [
+        "9 high-spend campaigns with low ROAS"
+      ],
+      "outliers": {
+        "roas": []
+      }
+    },
+    "task_2": {
+      "hypotheses": [
+        {
+          "id": "hyp_1",
+          "title": "Creative Fatigue",
+          "description": "Ad creatives showing declining engagement over time",
+          "confidence": 0.75,
+          "evidence": [
+            "CTR dropped significantly over campaign duration"
+          ],
+          "severity": "high"
+        }
+      ],
+      "primary_cause": "hyp_1",
+      "recommended_actions": [
+        "Refresh creative messaging",
+        "Test new ad formats"
+      ]
+    },
+    "task_3": {
+      "validated_hypotheses": [
+        {
+          "hypothesis_id": "hyp_1",
+          "title": "Creative Fatigue",
+          "validation_score": 0.7,
+          "metrics": {
+            "correlation": -0.3,
+            "p_value": 0.05,
+            "sample_size": 250,
+            "fatigue_indicator": true,
+            "ctr_drop": -0.0020228431066108173
+          },
+          "is_valid": true,
+          "strength": "medium"
+        }
+      ],
+      "validation_confidence": 0.7,
+      "recommendation": {
+        "action": "Refresh ad creatives with new messaging",
+        "priority": "medium",
+        "expected_impact": "+10-20% performance improvement"
+      }
+    },
+    "task_4": []
+  },
+  "end_time": "2025-10-27T13:50:30.045945",
+  "status": "completed"
+}

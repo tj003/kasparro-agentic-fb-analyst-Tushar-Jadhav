@@ -1,0 +1,2429 @@
+{
+  "start_time": "2025-10-27T14:01:30.262834",
+  "query": "Analyze ROAS drop",
+  "tasks": [
+    {
+      "id": "task_1",
+      "agent": "data_agent",
+      "description": "Summarize dataset",
+      "dependencies": []
+    },
+    {
+      "id": "task_2",
+      "agent": "insight_agent",
+      "description": "Generate hypotheses",
+      "dependencies": [
+        "task_1"
+      ]
+    },
+    {
+      "id": "task_3",
+      "agent": "evaluator_agent",
+      "description": "Validate with metrics",
+      "dependencies": [
+        "task_2"
+      ]
+    },
+    {
+      "id": "task_4",
+      "agent": "creative_agent",
+      "description": "Generate creative suggestions",
+      "dependencies": [
+        "task_3"
+      ]
+    }
+  ],
+  "results": {
+    "task_1": {
+      "total_campaigns": 367,
+      "total_records": 4500,
+      "date_range": {
+        "start": "2025-01-01",
+        "end": "2025-03-31"
+      },
+      "metrics": {
+        "roas": {
+          "mean": 9.634399910932975,
+          "median": 4.34,
+          "std": 16.452217496355477,
+          "min": 0.0,
+          "max": 286.05
+        },
+        "ctr": {
+          "mean": 0.013065511111111112,
+          "median": 0.0121,
+          "std": 0.005100851911738098
+        },
+        "spend": {
+          "total": 2105579.9,
+          "mean": 479.9589468885343,
+          "median": 439.06
+        }
+      },
+      "patterns": [
+        "446 high-spend campaigns with low ROAS"
+      ],
+      "outliers": {
+        "roas": [
+          {
+            "campaign": "Men  ComfortMax  Launch",
+            "value": 51.52,
+            "type": "high"
+          },
+          {
+            "campaign": "Men_ComfortMax_Launch",
+            "value": 24.45,
+            "type": "high"
+          },
+          {
+            "campaign": "Men_ComfortMax_Launch",
+            "value": 49.66,
+            "type": "high"
+          },
+          {
+            "campaign": "men comfortmax launch",
+            "value": 56.3,
+            "type": "high"
+          },
+          {
+            "campaign": "Men Comfortmax Launch",
+            "value": 86.45,
+            "type": "high"
+          },
+          {
+            "campaign": "Men ComfortMax Launch",
+            "value": 27.01,
+            "type": "high"
+          },
+          {
+            "campaign": "Men Comfortmax Launch",
+            "value": 38.21,
+            "type": "high"
+          },
+          {
+            "campaign": "Men_ComfortMax_Launch",
+            "value": 44.24,
+            "type": "high"
+          },
+          {
+            "campaign": "Men ComfortMax Launch",
+            "value": 36.7,
+            "type": "high"
+          },
+          {
+            "campaign": "Men Comfort-ax Launch",
+            "value": 28.25,
+            "type": "high"
+          },
+          {
+            "campaign": "Men  ComfortMax  Launch",
+            "value": 48.93,
+            "type": "high"
+          },
+          {
+            "campaign": "Men  ComfortMax  Launch",
+            "value": 128.09,
+            "type": "high"
+          },
+          {
+            "campaign": "Men ComfortMax Launch",
+            "value": 37.24,
+            "type": "high"
+          },
+          {
+            "campaign": "Men ComfortMax Launch",
+            "value": 55.95,
+            "type": "high"
+          },
+          {
+            "campaign": "Men Comfo tmax Launch",
+            "value": 24.3,
+            "type": "high"
+          },
+          {
+            "campaign": "men comfortmax launch",
+            "value": 286.05,
+            "type": "high"
+          },
+          {
+            "campaign": "men comfortmax launch",
+            "value": 44.48,
+            "type": "high"
+          },
+          {
+            "campaign": "Men ComfortMax Launch",
+            "value": 93.97,
+            "type": "high"
+          },
+          {
+            "campaign": "Men_ComfortMax_Launch",
+            "value": 24.38,
+            "type": "high"
+          },
+          {
+            "campaign": "Men ComfortMax Launch",
+            "value": 79.27,
+            "type": "high"
+          },
+          {
+            "campaign": "Men ComfortMax Launch",
+            "value": 63.55,
+            "type": "high"
+          },
+          {
+            "campaign": "Men ComfortMax Launch",
+            "value": 35.56,
+            "type": "high"
+          },
+          {
+            "campaign": "Men ComfortMax Launch",
+            "value": 46.24,
+            "type": "high"
+          },
+          {
+            "campaign": "Men_ComfortMax_Launch",
+            "value": 24.95,
+            "type": "high"
+          },
+          {
+            "campaign": "MEN COMFORTMAX LAUNCH",
+            "value": 36.45,
+            "type": "high"
+          },
+          {
+            "campaign": "Men ComfortMax Launch",
+            "value": 26.65,
+            "type": "high"
+          },
+          {
+            "campaign": "Men  ComfortMax  Launch",
+            "value": 52.16,
+            "type": "high"
+          },
+          {
+            "campaign": "men comfortmax launch",
+            "value": 28.35,
+            "type": "high"
+          },
+          {
+            "campaign": "Men_ComfortMax_Launch",
+            "value": 44.04,
+            "type": "high"
+          },
+          {
+            "campaign": "Men ComfortMax Launch",
+            "value": 61.0,
+            "type": "high"
+          },
+          {
+            "campaign": "Men Comfortmax Launch",
+            "value": 26.83,
+            "type": "high"
+          },
+          {
+            "campaign": "Men_ComfortMax_Launch",
+            "value": 93.62,
+            "type": "high"
+          },
+          {
+            "campaign": "Men ComfortMax Launch",
+            "value": 27.98,
+            "type": "high"
+          },
+          {
+            "campaign": "Men ComfortMax Launch",
+            "value": 77.25,
+            "type": "high"
+          },
+          {
+            "campaign": "Men ComfortMax Launch",
+            "value": 32.28,
+            "type": "high"
+          },
+          {
+            "campaign": "men comfortmax launch",
+            "value": 64.62,
+            "type": "high"
+          },
+          {
+            "campaign": "Men ComfortMax Launch",
+            "value": 27.21,
+            "type": "high"
+          },
+          {
+            "campaign": "Men Comfortma- Launch",
+            "value": 37.11,
+            "type": "high"
+          },
+          {
+            "campaign": "men comfortmax launch",
+            "value": 31.43,
+            "type": "high"
+          },
+          {
+            "campaign": "MEN COMFORTMAX LAUNCH",
+            "value": 135.47,
+            "type": "high"
+          },
+          {
+            "campaign": "men comfortmax launch",
+            "value": 46.2,
+            "type": "high"
+          },
+          {
+            "campaign": "Men  ComfortMax  Launch",
+            "value": 27.71,
+            "type": "high"
+          },
+          {
+            "campaign": "Men ComfortMax Launch",
+            "value": 136.2,
+            "type": "high"
+          },
+          {
+            "campaign": "Men ComfortMax Launch",
+            "value": 35.7,
+            "type": "high"
+          },
+          {
+            "campaign": "Men ComfortMax Launch",
+            "value": 29.67,
+            "type": "high"
+          },
+          {
+            "campaign": "MEN COMFORTMAX LAUNCH",
+            "value": 70.07,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN Seamless Everyday",
+            "value": 27.51,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN SEAMLESS EVERYDAY",
+            "value": 38.06,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN SEAMLESS EVERYDAY",
+            "value": 67.49,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN Seamless Everyday",
+            "value": 37.08,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN Seamless Everyday",
+            "value": 53.41,
+            "type": "high"
+          },
+          {
+            "campaign": "women seam-ess everyday",
+            "value": 38.71,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN SEAMLESS EVERYDAY",
+            "value": 66.67,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN Seamless Everyday",
+            "value": 54.66,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN Seamless Everyday",
+            "value": 67.0,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN Seamless Everyday",
+            "value": 89.3,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN SEAMLESS EVERYDAY",
+            "value": 76.96,
+            "type": "high"
+          },
+          {
+            "campaign": "Women Seamless Everyday",
+            "value": 27.47,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN  Seamless  Everyday",
+            "value": 23.91,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN Seamless Everyday",
+            "value": 27.06,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN Seamless Everyday",
+            "value": 26.34,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN SEAMLESS EVERYDAY",
+            "value": 23.44,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN  Seamless  Everyday",
+            "value": 26.04,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN Seamless Everyday",
+            "value": 79.84,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN Seamless Everyday",
+            "value": 33.91,
+            "type": "high"
+          },
+          {
+            "campaign": "WMEN Seamless Everyday",
+            "value": 31.14,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN Seamless Everyday",
+            "value": 30.82,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN Seamless Everyday",
+            "value": 133.14,
+            "type": "high"
+          },
+          {
+            "campaign": "Women Seamless Everyday",
+            "value": 23.5,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN Seamless Everyday",
+            "value": 26.72,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN Seamless Everyday",
+            "value": 37.16,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN  Seamless  Everyday",
+            "value": 55.57,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN Seamless Everyday",
+            "value": 57.19,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN_Seamless_Everyday",
+            "value": 24.02,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN SEAMLESS EVERYDAY",
+            "value": 96.44,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN Seamless Everyday",
+            "value": 27.87,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN Seamless Everyday",
+            "value": 26.56,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN Seamless Everyday",
+            "value": 31.95,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN Seamless Everyday",
+            "value": 40.33,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN_Seamless_Everyday",
+            "value": 53.73,
+            "type": "high"
+          },
+          {
+            "campaign": "MEN | ATHLEISURE COOLING",
+            "value": 53.78,
+            "type": "high"
+          },
+          {
+            "campaign": "MEN | ATHLEISURE COOLING",
+            "value": 31.9,
+            "type": "high"
+          },
+          {
+            "campaign": "men | athleisure cooling",
+            "value": 71.65,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | Athleisure Cooling",
+            "value": 80.75,
+            "type": "high"
+          },
+          {
+            "campaign": "MEN | ATHLEISURE COOLING",
+            "value": 25.43,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | Athleisure Cooling",
+            "value": 151.48,
+            "type": "high"
+          },
+          {
+            "campaign": "men | athleisure cooling",
+            "value": 113.18,
+            "type": "high"
+          },
+          {
+            "campaign": "Men  |  Athleisure  Cooling",
+            "value": 30.48,
+            "type": "high"
+          },
+          {
+            "campaign": "Men  |  Athleisure  Cooling",
+            "value": 66.99,
+            "type": "high"
+          },
+          {
+            "campaign": "Men_|_Athleisure_Cooling",
+            "value": 23.92,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | Athleisure Cooling",
+            "value": 56.33,
+            "type": "high"
+          },
+          {
+            "campaign": "Men  |  Athleisure  Cooling",
+            "value": 43.59,
+            "type": "high"
+          },
+          {
+            "campaign": "MEN | ATHLEISURE COOLING",
+            "value": 23.74,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | Athleisure Cooling",
+            "value": 43.87,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | Athleisure Cooling",
+            "value": 27.05,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | Athleisure Cooling",
+            "value": 32.97,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | Athleisure Cooling",
+            "value": 31.36,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | Athleisure Cooling",
+            "value": 165.44,
+            "type": "high"
+          },
+          {
+            "campaign": "Men-Athleisure Cooling",
+            "value": 51.57,
+            "type": "high"
+          },
+          {
+            "campaign": "MEN | ATHLEISURE COOLING",
+            "value": 40.34,
+            "type": "high"
+          },
+          {
+            "campaign": "Men  |  Athleisure  Cooling",
+            "value": 41.44,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | Athleisure Cooling",
+            "value": 26.4,
+            "type": "high"
+          },
+          {
+            "campaign": "Men_|_Athleisure_Cooling",
+            "value": 23.57,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | Athleisure Cooling",
+            "value": 25.15,
+            "type": "high"
+          },
+          {
+            "campaign": "Men  |  Athleisure  Cooling",
+            "value": 116.62,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | Athleisure Cooling",
+            "value": 81.07,
+            "type": "high"
+          },
+          {
+            "campaign": "MEN | ATHLEISURE COOLING",
+            "value": 32.04,
+            "type": "high"
+          },
+          {
+            "campaign": "men | athleisure cooling",
+            "value": 57.36,
+            "type": "high"
+          },
+          {
+            "campaign": "Men-Athleisure Cooling",
+            "value": 54.28,
+            "type": "high"
+          },
+          {
+            "campaign": "Men_|_Athleisure_Cooling",
+            "value": 39.32,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | Athleisure Cooling",
+            "value": 25.62,
+            "type": "high"
+          },
+          {
+            "campaign": "men | athleisure cooling",
+            "value": 63.73,
+            "type": "high"
+          },
+          {
+            "campaign": "Men  |  Athleisure  Cooling",
+            "value": 42.12,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | Athleisure Cooling",
+            "value": 23.75,
+            "type": "high"
+          },
+          {
+            "campaign": "Men-Athleisure Cooling",
+            "value": 33.9,
+            "type": "high"
+          },
+          {
+            "campaign": "Men-Athleisure Cooling",
+            "value": 30.15,
+            "type": "high"
+          },
+          {
+            "campaign": "Men-Athleisure Cooling",
+            "value": 29.61,
+            "type": "high"
+          },
+          {
+            "campaign": "MEN | ATHLEISURE COOLING",
+            "value": 73.42,
+            "type": "high"
+          },
+          {
+            "campaign": "Men-Athleisure Cooling",
+            "value": 77.05,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | Athleisure Cooling",
+            "value": 36.34,
+            "type": "high"
+          },
+          {
+            "campaign": "Men_|_Athleisure_Cooling",
+            "value": 34.09,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | Athleisure Cooling",
+            "value": 35.8,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | Athleisure Cooling",
+            "value": 24.4,
+            "type": "high"
+          },
+          {
+            "campaign": "MEN | ATHLEISURE COOLING",
+            "value": 51.8,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | Athleisure Cooling",
+            "value": 46.84,
+            "type": "high"
+          },
+          {
+            "campaign": "MEN | ATHLEISURE COOLING",
+            "value": 31.71,
+            "type": "high"
+          },
+          {
+            "campaign": "men | athleisure cooling",
+            "value": 30.14,
+            "type": "high"
+          },
+          {
+            "campaign": "Men_|_Athleisure_Cooling",
+            "value": 29.83,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | Athleisure Cooling",
+            "value": 46.7,
+            "type": "high"
+          },
+          {
+            "campaign": "MEN | ATHLEISURE COOLING",
+            "value": 173.56,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | Athleisure Cooling",
+            "value": 150.6,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | Athleisure Cooling",
+            "value": 46.78,
+            "type": "high"
+          },
+          {
+            "campaign": "Men_|_Athleisure_Cooling",
+            "value": 189.05,
+            "type": "high"
+          },
+          {
+            "campaign": "Men-Athleisure Cooling",
+            "value": 82.33,
+            "type": "high"
+          },
+          {
+            "campaign": "m n | athleisure cooling",
+            "value": 38.4,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | Athleisure Cooling",
+            "value": 23.94,
+            "type": "high"
+          },
+          {
+            "campaign": "Men-Athleisure Cooling",
+            "value": 62.33,
+            "type": "high"
+          },
+          {
+            "campaign": "Men-Athleisure Cooling",
+            "value": 25.47,
+            "type": "high"
+          },
+          {
+            "campaign": "Men  |  Athleisure  Cooling",
+            "value": 57.44,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | Athleisure Cooling",
+            "value": 29.66,
+            "type": "high"
+          },
+          {
+            "campaign": "Men-Athleisure Cooling",
+            "value": 84.76,
+            "type": "high"
+          },
+          {
+            "campaign": "men | athleisure cooling",
+            "value": 31.16,
+            "type": "high"
+          },
+          {
+            "campaign": "Men_|_Athleisure_Cooling",
+            "value": 53.94,
+            "type": "high"
+          },
+          {
+            "campaign": "MEN | ATHLEISURE COOLING",
+            "value": 24.64,
+            "type": "high"
+          },
+          {
+            "campaign": "Men-Athleisure Cooling",
+            "value": 75.93,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | Athleisure Cooling",
+            "value": 31.54,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | Athleisure Cooling",
+            "value": 30.2,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | Athleisure Cooling",
+            "value": 54.61,
+            "type": "high"
+          },
+          {
+            "campaign": "Men  |  Athleisure  Cooling",
+            "value": 26.36,
+            "type": "high"
+          },
+          {
+            "campaign": "Men-Athleisure Cooling",
+            "value": 33.84,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | Athleisure Cooling",
+            "value": 35.61,
+            "type": "high"
+          },
+          {
+            "campaign": "men | athleisure cooling",
+            "value": 38.07,
+            "type": "high"
+          },
+          {
+            "campaign": "MEN | ATHLEISURE COOLING",
+            "value": 46.06,
+            "type": "high"
+          },
+          {
+            "campaign": "Men  |  Athleisure  Cooling",
+            "value": 33.57,
+            "type": "high"
+          },
+          {
+            "campaign": "MEN | ATHLEISURE COOLING",
+            "value": 35.55,
+            "type": "high"
+          },
+          {
+            "campaign": "Men_|_Athleisure_Cooling",
+            "value": 31.82,
+            "type": "high"
+          },
+          {
+            "campaign": "men | athleisure cooling",
+            "value": 54.17,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | Athleisure Cooling",
+            "value": 155.2,
+            "type": "high"
+          },
+          {
+            "campaign": "Men  |  Athleisure Cooling",
+            "value": 31.86,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | thleisure Cooling",
+            "value": 34.37,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | Athleisure Cooling",
+            "value": 121.24,
+            "type": "high"
+          },
+          {
+            "campaign": "Men  |  Athleisure  Co ling",
+            "value": 24.01,
+            "type": "high"
+          },
+          {
+            "campaign": "men | athleisure cooling",
+            "value": 26.29,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | Athleis re Cooling",
+            "value": 26.07,
+            "type": "high"
+          },
+          {
+            "campaign": "Men-Athleisure Cooling",
+            "value": 31.7,
+            "type": "high"
+          },
+          {
+            "campaign": "Men  |  Athlei ure  Cooling",
+            "value": 29.92,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | Athleisure Cooling",
+            "value": 31.67,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | Athleisure Cooling",
+            "value": 30.4,
+            "type": "high"
+          },
+          {
+            "campaign": "MEN | ATHLEISURE COOLING",
+            "value": 33.93,
+            "type": "high"
+          },
+          {
+            "campaign": "Men_|_Athleisure_Cooling",
+            "value": 80.04,
+            "type": "high"
+          },
+          {
+            "campaign": "men | athleisure cooling",
+            "value": 36.1,
+            "type": "high"
+          },
+          {
+            "campaign": "MEN | ATHLEISURE COOLING",
+            "value": 32.11,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | Athleisure Cooling",
+            "value": 37.1,
+            "type": "high"
+          },
+          {
+            "campaign": "Men_|_Athleisure_Cooling",
+            "value": 33.36,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | Athleisure Cooling",
+            "value": 57.51,
+            "type": "high"
+          },
+          {
+            "campaign": "Men-Athleisure Cooling",
+            "value": 43.21,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | Athleisure Cooling",
+            "value": 23.71,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | Athleisure Cooling",
+            "value": 31.61,
+            "type": "high"
+          },
+          {
+            "campaign": "Men  |  Athleisure  Cooling",
+            "value": 34.13,
+            "type": "high"
+          },
+          {
+            "campaign": "Men-Athleisure Cooling",
+            "value": 53.51,
+            "type": "high"
+          },
+          {
+            "campaign": "Men_|_Athleisure_Cooling",
+            "value": 29.28,
+            "type": "high"
+          },
+          {
+            "campaign": "Men  |  Athleisure  Cooling",
+            "value": 38.0,
+            "type": "high"
+          },
+          {
+            "campaign": "men | athleisure cooling",
+            "value": 37.24,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | Athlei ure Cooling",
+            "value": 85.33,
+            "type": "high"
+          },
+          {
+            "campaign": "men | athleisure cooling",
+            "value": 29.03,
+            "type": "high"
+          },
+          {
+            "campaign": "Men_|_Athleisure_Cooling",
+            "value": 42.12,
+            "type": "high"
+          },
+          {
+            "campaign": "Men  |  Athleisure  Cooling",
+            "value": 59.19,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | Athleisure Cooling",
+            "value": 31.88,
+            "type": "high"
+          },
+          {
+            "campaign": "Men-Athleisure Cooling",
+            "value": 28.23,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | Athleisure Cooling",
+            "value": 30.08,
+            "type": "high"
+          },
+          {
+            "campaign": "Men-Athleisure Cooling",
+            "value": 25.09,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | Athleisure Cooling",
+            "value": 25.86,
+            "type": "high"
+          },
+          {
+            "campaign": "MEN | ATHLEISURE COOLING",
+            "value": 29.66,
+            "type": "high"
+          },
+          {
+            "campaign": "Men_|_Athleisure_Cooling",
+            "value": 46.85,
+            "type": "high"
+          },
+          {
+            "campaign": "men | athleisure cooling",
+            "value": 71.02,
+            "type": "high"
+          },
+          {
+            "campaign": "men | athleisure cooling",
+            "value": 65.45,
+            "type": "high"
+          },
+          {
+            "campaign": "Men_|_Athleisure_Cooling",
+            "value": 24.98,
+            "type": "high"
+          },
+          {
+            "campaign": "Men  |  Athleisure  Cooling",
+            "value": 24.27,
+            "type": "high"
+          },
+          {
+            "campaign": "Men-Athleisure Cooling",
+            "value": 82.55,
+            "type": "high"
+          },
+          {
+            "campaign": "Men | Athleisure Cooling",
+            "value": 91.45,
+            "type": "high"
+          },
+          {
+            "campaign": "MEN | ATHLEISURE COOLING",
+            "value": 24.3,
+            "type": "high"
+          },
+          {
+            "campaign": "women  Summer  Invisible",
+            "value": 40.13,
+            "type": "high"
+          },
+          {
+            "campaign": "women Summer Invisible",
+            "value": 42.95,
+            "type": "high"
+          },
+          {
+            "campaign": "women Summer Invisible",
+            "value": 96.66,
+            "type": "high"
+          },
+          {
+            "campaign": "women Summer Invisible",
+            "value": 30.71,
+            "type": "high"
+          },
+          {
+            "campaign": "women  Summer  Invisible",
+            "value": 31.09,
+            "type": "high"
+          },
+          {
+            "campaign": "women Su mer Invisible",
+            "value": 24.39,
+            "type": "high"
+          },
+          {
+            "campaign": "Women Summer Invisible",
+            "value": 26.2,
+            "type": "high"
+          },
+          {
+            "campaign": "women Summer In-isible",
+            "value": 24.31,
+            "type": "high"
+          },
+          {
+            "campaign": "Women Summer Invisible",
+            "value": 25.64,
+            "type": "high"
+          },
+          {
+            "campaign": "women Summer Invisible",
+            "value": 36.88,
+            "type": "high"
+          },
+          {
+            "campaign": "-omen summer invisible",
+            "value": 23.36,
+            "type": "high"
+          },
+          {
+            "campaign": "women Summer Invisible",
+            "value": 25.57,
+            "type": "high"
+          },
+          {
+            "campaign": "women_Summer_Invisible",
+            "value": 23.65,
+            "type": "high"
+          },
+          {
+            "campaign": "women  Summer  Invisible",
+            "value": 27.14,
+            "type": "high"
+          },
+          {
+            "campaign": "Women Summer Invisible",
+            "value": 32.99,
+            "type": "high"
+          },
+          {
+            "campaign": "women Summer Invisible",
+            "value": 31.25,
+            "type": "high"
+          },
+          {
+            "campaign": "women  Summer  Invisible",
+            "value": 44.67,
+            "type": "high"
+          },
+          {
+            "campaign": "women Summer Invisible",
+            "value": 43.66,
+            "type": "high"
+          },
+          {
+            "campaign": "women Summer Invisible",
+            "value": 119.87,
+            "type": "high"
+          },
+          {
+            "campaign": "women Summer Invisible",
+            "value": 34.74,
+            "type": "high"
+          },
+          {
+            "campaign": "women  Summer  Invisible",
+            "value": 49.57,
+            "type": "high"
+          },
+          {
+            "campaign": "women Summer Invisible",
+            "value": 41.69,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN SUMMER INVISIBLE",
+            "value": 31.45,
+            "type": "high"
+          },
+          {
+            "campaign": "women summer invisible",
+            "value": 40.91,
+            "type": "high"
+          },
+          {
+            "campaign": "women_Summer_Invisible",
+            "value": 35.98,
+            "type": "high"
+          },
+          {
+            "campaign": "women Summer Invisible",
+            "value": 28.68,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN SUMMER INVISIBLE",
+            "value": 24.79,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN SUMMER INVISIBLE",
+            "value": 35.35,
+            "type": "high"
+          },
+          {
+            "campaign": "women_Summer_Invisible",
+            "value": 28.75,
+            "type": "high"
+          },
+          {
+            "campaign": "MEN_Signature_Soft",
+            "value": 25.36,
+            "type": "high"
+          },
+          {
+            "campaign": "Women Fit & Lift",
+            "value": 32.38,
+            "type": "high"
+          },
+          {
+            "campaign": "Women Fit & Lift",
+            "value": 23.34,
+            "type": "high"
+          },
+          {
+            "campaign": "Women Fit & Lift",
+            "value": 30.75,
+            "type": "high"
+          },
+          {
+            "campaign": "Women  Fit  &  Lift",
+            "value": 33.58,
+            "type": "high"
+          },
+          {
+            "campaign": "Women Fit & Lift",
+            "value": 33.79,
+            "type": "high"
+          },
+          {
+            "campaign": "Women Fit & Lift",
+            "value": 23.54,
+            "type": "high"
+          },
+          {
+            "campaign": "women fit & lift",
+            "value": 41.5,
+            "type": "high"
+          },
+          {
+            "campaign": "women fit & lift",
+            "value": 26.01,
+            "type": "high"
+          },
+          {
+            "campaign": "Women  Fit  &  Lift",
+            "value": 25.59,
+            "type": "high"
+          },
+          {
+            "campaign": "Women Fit & Lift",
+            "value": 45.93,
+            "type": "high"
+          },
+          {
+            "campaign": "Women  Fit  &  Lift",
+            "value": 25.63,
+            "type": "high"
+          },
+          {
+            "campaign": "Women  Fit  &  Lift",
+            "value": 47.01,
+            "type": "high"
+          },
+          {
+            "campaign": "Women Fit and Lift",
+            "value": 29.16,
+            "type": "high"
+          },
+          {
+            "campaign": "Women_Fit_&_Lift",
+            "value": 29.18,
+            "type": "high"
+          },
+          {
+            "campaign": "Women_Fit_&_Lift",
+            "value": 28.88,
+            "type": "high"
+          },
+          {
+            "campaign": "women fit & lift",
+            "value": 29.5,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN FIT & LIFT",
+            "value": 58.85,
+            "type": "high"
+          },
+          {
+            "campaign": "Women_Fit_&_Lift",
+            "value": 34.32,
+            "type": "high"
+          },
+          {
+            "campaign": "Women Fit & Lift",
+            "value": 45.69,
+            "type": "high"
+          },
+          {
+            "campaign": "Women Fit and Lift",
+            "value": 27.0,
+            "type": "high"
+          },
+          {
+            "campaign": "women fit & lift",
+            "value": 24.23,
+            "type": "high"
+          },
+          {
+            "campaign": "Men Bold Colors Drop",
+            "value": 24.72,
+            "type": "high"
+          },
+          {
+            "campaign": "Men  Bold  Colors  Drop",
+            "value": 23.31,
+            "type": "high"
+          },
+          {
+            "campaign": "Men Bold Colors Drop",
+            "value": 25.03,
+            "type": "high"
+          },
+          {
+            "campaign": "women cotton classics",
+            "value": 48.87,
+            "type": "high"
+          },
+          {
+            "campaign": "Women Cotton Classics",
+            "value": 29.47,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN_Cotton_Classics",
+            "value": 35.9,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN  Cotton  Classics",
+            "value": 34.28,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN COTTON CLASSICS",
+            "value": 38.57,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN Cotton Classics",
+            "value": 36.49,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN COTTON CLASSICS",
+            "value": 26.37,
+            "type": "high"
+          },
+          {
+            "campaign": "women cotton classics",
+            "value": 23.74,
+            "type": "high"
+          },
+          {
+            "campaign": "Women Cotton Classics",
+            "value": 51.2,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN Cotton Classics",
+            "value": 57.5,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN Cotton Classics",
+            "value": 33.7,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN Cotton Classics",
+            "value": 203.27,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN_Cotton_Classics",
+            "value": 33.17,
+            "type": "high"
+          },
+          {
+            "campaign": "Women Cotton Classics",
+            "value": 23.23,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN_Cotton_Classics",
+            "value": 61.85,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN Cotton Classics",
+            "value": 68.98,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN  Cotton  Classics",
+            "value": 39.48,
+            "type": "high"
+          },
+          {
+            "campaign": "Women Cotton Classics",
+            "value": 68.14,
+            "type": "high"
+          },
+          {
+            "campaign": "Women Cotton Classics",
+            "value": 29.26,
+            "type": "high"
+          },
+          {
+            "campaign": "Women Cotton Classics",
+            "value": 54.14,
+            "type": "high"
+          },
+          {
+            "campaign": "Women Cotton Classics",
+            "value": 97.2,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN Cotton Classics",
+            "value": 23.79,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN COTTON CLASSICS",
+            "value": 25.68,
+            "type": "high"
+          },
+          {
+            "campaign": "Women Cotton Classics",
+            "value": 85.55,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN Cotton Classics",
+            "value": 50.89,
+            "type": "high"
+          },
+          {
+            "campaign": "women cotton classics",
+            "value": 55.34,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN Cotton Classics",
+            "value": 38.54,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN Cotton Classics",
+            "value": 71.78,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN COTTON CLASSICS",
+            "value": 34.53,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN COTTON CLASSICS",
+            "value": 26.14,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN COTTON CLASSICS",
+            "value": 39.34,
+            "type": "high"
+          },
+          {
+            "campaign": "Women Cotton Classics",
+            "value": 26.7,
+            "type": "high"
+          },
+          {
+            "campaign": "women cotton classics",
+            "value": 30.04,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN_Cotton_Classics",
+            "value": 27.1,
+            "type": "high"
+          },
+          {
+            "campaign": "women cotton classics",
+            "value": 45.98,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN  Cotton  Classics",
+            "value": 129.61,
+            "type": "high"
+          },
+          {
+            "campaign": "Women Cotton Classics",
+            "value": 62.54,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN Cotton Classics",
+            "value": 34.41,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN Cotton Classics",
+            "value": 24.46,
+            "type": "high"
+          },
+          {
+            "campaign": "Women Cotton Classics",
+            "value": 25.0,
+            "type": "high"
+          },
+          {
+            "campaign": "Women Cotton Classics",
+            "value": 31.66,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN  Cotton  Classics",
+            "value": 26.02,
+            "type": "high"
+          },
+          {
+            "campaign": "Women Cotton Classics",
+            "value": 42.97,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN Cotton Classics",
+            "value": 25.97,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN COTTON CLASSICS",
+            "value": 25.83,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN Cotton Classics",
+            "value": 62.87,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN Cotton Classics",
+            "value": 32.8,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN Cotton Classics",
+            "value": 71.52,
+            "type": "high"
+          },
+          {
+            "campaign": "Women Cotton Classics",
+            "value": 39.1,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN  Cotto-  Classics",
+            "value": 25.93,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN_Cotton_Classics",
+            "value": 39.73,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN Cotton Classics",
+            "value": 26.02,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN_Cotton_Classics",
+            "value": 56.18,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN  Cotton  Classics",
+            "value": 33.1,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN COTTON CLASSICS",
+            "value": 28.36,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN Cotton Classics",
+            "value": 122.79,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN Cotton Classics",
+            "value": 28.64,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN  Cotton  Classics",
+            "value": 39.55,
+            "type": "high"
+          },
+          {
+            "campaign": "women cotton classics",
+            "value": 23.21,
+            "type": "high"
+          },
+          {
+            "campaign": "women cotton classics",
+            "value": 105.04,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN_Cotton_Classics",
+            "value": 28.29,
+            "type": "high"
+          },
+          {
+            "campaign": "Men Premium Modal",
+            "value": 33.87,
+            "type": "high"
+          },
+          {
+            "campaign": "Men Premium Modal",
+            "value": 48.68,
+            "type": "high"
+          },
+          {
+            "campaign": "Men  Premium  Modal",
+            "value": 28.46,
+            "type": "high"
+          },
+          {
+            "campaign": "Men Premium Modal",
+            "value": 40.29,
+            "type": "high"
+          },
+          {
+            "campaign": "Men Premium Modal",
+            "value": 36.27,
+            "type": "high"
+          },
+          {
+            "campaign": "Men Premium Modal",
+            "value": 42.65,
+            "type": "high"
+          },
+          {
+            "campaign": "Men Premium Modal",
+            "value": 29.31,
+            "type": "high"
+          },
+          {
+            "campaign": "Men Premium Modal",
+            "value": 28.57,
+            "type": "high"
+          },
+          {
+            "campaign": "Men Premium Modal",
+            "value": 185.38,
+            "type": "high"
+          },
+          {
+            "campaign": "Men  Premium  Modal",
+            "value": 29.22,
+            "type": "high"
+          },
+          {
+            "campaign": "Men  Premium  Modal",
+            "value": 39.16,
+            "type": "high"
+          },
+          {
+            "campaign": "men premium modal",
+            "value": 25.25,
+            "type": "high"
+          },
+          {
+            "campaign": "men premium modal",
+            "value": 43.53,
+            "type": "high"
+          },
+          {
+            "campaign": "Men Premium Modal",
+            "value": 87.92,
+            "type": "high"
+          },
+          {
+            "campaign": "MEN PREMIUM MODAL",
+            "value": 48.33,
+            "type": "high"
+          },
+          {
+            "campaign": "MEN PREMIUM MODAL",
+            "value": 26.12,
+            "type": "high"
+          },
+          {
+            "campaign": "Men Premium Modal",
+            "value": 28.13,
+            "type": "high"
+          },
+          {
+            "campaign": "Men Premium Modal",
+            "value": 32.37,
+            "type": "high"
+          },
+          {
+            "campaign": "Men Premium Modal",
+            "value": 144.34,
+            "type": "high"
+          },
+          {
+            "campaign": "Men Premium Modal",
+            "value": 23.8,
+            "type": "high"
+          },
+          {
+            "campaign": "Men  Premium  Modal",
+            "value": 53.74,
+            "type": "high"
+          },
+          {
+            "campaign": "Men Premium Modal",
+            "value": 40.39,
+            "type": "high"
+          },
+          {
+            "campaign": "Men Premium Modal",
+            "value": 24.72,
+            "type": "high"
+          },
+          {
+            "campaign": "MEN PREMIUM MODAL",
+            "value": 78.59,
+            "type": "high"
+          },
+          {
+            "campaign": "MEN PREMIUM -ODAL",
+            "value": 89.33,
+            "type": "high"
+          },
+          {
+            "campaign": "Men Premium Modal",
+            "value": 76.95,
+            "type": "high"
+          },
+          {
+            "campaign": "MEN PREMIUM MODAL",
+            "value": 38.77,
+            "type": "high"
+          },
+          {
+            "campaign": "Men_Premium_Modal",
+            "value": 34.05,
+            "type": "high"
+          },
+          {
+            "campaign": "men premium modal",
+            "value": 34.34,
+            "type": "high"
+          },
+          {
+            "campaign": "Men Premium Modal",
+            "value": 23.43,
+            "type": "high"
+          },
+          {
+            "campaign": "Men Premium Modal",
+            "value": 29.46,
+            "type": "high"
+          },
+          {
+            "campaign": "Men Premium Modal",
+            "value": 28.3,
+            "type": "high"
+          },
+          {
+            "campaign": "MEN PREMIUM MODAL",
+            "value": 25.32,
+            "type": "high"
+          },
+          {
+            "campaign": "MEN PREMIUM MODAL",
+            "value": 48.95,
+            "type": "high"
+          },
+          {
+            "campaign": "Men Premium Modal",
+            "value": 92.47,
+            "type": "high"
+          },
+          {
+            "campaign": "Men_Premium_Modal",
+            "value": 40.6,
+            "type": "high"
+          },
+          {
+            "campaign": "Men Premium Modal",
+            "value": 31.63,
+            "type": "high"
+          },
+          {
+            "campaign": "MEN PREMIUM MODAL",
+            "value": 23.46,
+            "type": "high"
+          },
+          {
+            "campaign": "Women | Studio Sports",
+            "value": 57.72,
+            "type": "high"
+          },
+          {
+            "campaign": "Women_|_Studio_Sports",
+            "value": 30.38,
+            "type": "high"
+          },
+          {
+            "campaign": "women | studio sp-rts",
+            "value": 76.37,
+            "type": "high"
+          },
+          {
+            "campaign": "women | studio sports",
+            "value": 81.63,
+            "type": "high"
+          },
+          {
+            "campaign": "Women | Studio Sports",
+            "value": 79.86,
+            "type": "high"
+          },
+          {
+            "campaign": "Women  |  Studio  Sports",
+            "value": 60.26,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN | STUDIO SPORTS",
+            "value": 35.8,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN | STUDIO SPORTS",
+            "value": 29.32,
+            "type": "high"
+          },
+          {
+            "campaign": "Women | Studio Sports",
+            "value": 40.43,
+            "type": "high"
+          },
+          {
+            "campaign": "women | studio sports",
+            "value": 58.64,
+            "type": "high"
+          },
+          {
+            "campaign": "Women | Studio Sports",
+            "value": 24.91,
+            "type": "high"
+          },
+          {
+            "campaign": "Women | Studio Sports",
+            "value": 42.14,
+            "type": "high"
+          },
+          {
+            "campaign": "Women-Studio Sports",
+            "value": 30.51,
+            "type": "high"
+          },
+          {
+            "campaign": "Women  |  Studio  Sports",
+            "value": 42.96,
+            "type": "high"
+          },
+          {
+            "campaign": "Women_|_Studio_Sports",
+            "value": 23.85,
+            "type": "high"
+          },
+          {
+            "campaign": "-omen_|_Studio_Sports",
+            "value": 26.26,
+            "type": "high"
+          },
+          {
+            "campaign": "Women | Studio Sports",
+            "value": 48.91,
+            "type": "high"
+          },
+          {
+            "campaign": "Women | Studio Sports",
+            "value": 45.91,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN | STUDIO SPORTS",
+            "value": 46.19,
+            "type": "high"
+          },
+          {
+            "campaign": "Women | Studio Sports",
+            "value": 39.28,
+            "type": "high"
+          },
+          {
+            "campaign": "Women-Studio Sports",
+            "value": 61.52,
+            "type": "high"
+          },
+          {
+            "campaign": "Women_|_Studio_Sports",
+            "value": 61.63,
+            "type": "high"
+          },
+          {
+            "campaign": "Women | Studio Sports",
+            "value": 43.96,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN | STUDIO SPORTS",
+            "value": 33.63,
+            "type": "high"
+          },
+          {
+            "campaign": "Women  |  Studio  Sports",
+            "value": 32.34,
+            "type": "high"
+          },
+          {
+            "campaign": "Women-Studio Sports",
+            "value": 26.79,
+            "type": "high"
+          },
+          {
+            "campaign": "Women | Studio Sports",
+            "value": 100.85,
+            "type": "high"
+          },
+          {
+            "campaign": "Women | Studio Sports",
+            "value": 50.99,
+            "type": "high"
+          },
+          {
+            "campaign": "Women-Studio Sports",
+            "value": 45.13,
+            "type": "high"
+          },
+          {
+            "campaign": "Women | Studio Sports",
+            "value": 24.68,
+            "type": "high"
+          },
+          {
+            "campaign": "Women-Studio Sports",
+            "value": 32.87,
+            "type": "high"
+          },
+          {
+            "campaign": "women | studio sports",
+            "value": 23.36,
+            "type": "high"
+          },
+          {
+            "campaign": "Women | Studio Sports",
+            "value": 72.19,
+            "type": "high"
+          },
+          {
+            "campaign": "Women | Studio Sports",
+            "value": 24.28,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN | STUDIO SPORTS",
+            "value": 28.09,
+            "type": "high"
+          },
+          {
+            "campaign": "Women  |  Studio  Sports",
+            "value": 23.48,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN | STUDIO SPORTS",
+            "value": 113.46,
+            "type": "high"
+          },
+          {
+            "campaign": "Women  |  Studio  Sports",
+            "value": 42.79,
+            "type": "high"
+          },
+          {
+            "campaign": "Women_|_Studio_Sports",
+            "value": 35.46,
+            "type": "high"
+          },
+          {
+            "campaign": "Women | Studio Sports",
+            "value": 49.03,
+            "type": "high"
+          },
+          {
+            "campaign": "Women  |  Studio  Sports",
+            "value": 30.38,
+            "type": "high"
+          },
+          {
+            "campaign": "Women | Studio Sports",
+            "value": 24.04,
+            "type": "high"
+          },
+          {
+            "campaign": "Women  |  Studio  Sports",
+            "value": 25.44,
+            "type": "high"
+          },
+          {
+            "campaign": "Women_|_Studio_Sports",
+            "value": 27.91,
+            "type": "high"
+          },
+          {
+            "campaign": "Women | Studio Sports",
+            "value": 60.24,
+            "type": "high"
+          },
+          {
+            "campaign": "Women | Studio Sports",
+            "value": 82.54,
+            "type": "high"
+          },
+          {
+            "campaign": "Women | Studio Sports",
+            "value": 28.86,
+            "type": "high"
+          },
+          {
+            "campaign": "Women | Studio Sports",
+            "value": 30.99,
+            "type": "high"
+          },
+          {
+            "campaign": "Women_|_Studio_Sports",
+            "value": 27.47,
+            "type": "high"
+          },
+          {
+            "campaign": "Women  |  Studio  Sports",
+            "value": 41.49,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN | STUDIO SPORTS",
+            "value": 27.92,
+            "type": "high"
+          },
+          {
+            "campaign": "Women_|_Studio_Sports",
+            "value": 26.81,
+            "type": "high"
+          },
+          {
+            "campaign": "Women | Studio Sports",
+            "value": 66.09,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN | STUDIO SPORTS",
+            "value": 23.99,
+            "type": "high"
+          },
+          {
+            "campaign": "Women  |  Studio Sports",
+            "value": 30.92,
+            "type": "high"
+          },
+          {
+            "campaign": "Women  |  Studio  Sports",
+            "value": 61.62,
+            "type": "high"
+          },
+          {
+            "campaign": "Women-Studio Sports",
+            "value": 78.5,
+            "type": "high"
+          },
+          {
+            "campaign": "Women-Studio Sports",
+            "value": 24.47,
+            "type": "high"
+          },
+          {
+            "campaign": "Women | Studio Sports",
+            "value": 29.15,
+            "type": "high"
+          },
+          {
+            "campaign": "Women | Studio Sports",
+            "value": 31.8,
+            "type": "high"
+          },
+          {
+            "campaign": "Women | Studio Sports",
+            "value": 46.65,
+            "type": "high"
+          },
+          {
+            "campaign": "Women | Studio Sports",
+            "value": 26.27,
+            "type": "high"
+          },
+          {
+            "campaign": "Women | Studio Sports",
+            "value": 121.16,
+            "type": "high"
+          },
+          {
+            "campaign": "Women  |  Studio  Sports",
+            "value": 125.29,
+            "type": "high"
+          },
+          {
+            "campaign": "women | studio sports",
+            "value": 25.02,
+            "type": "high"
+          },
+          {
+            "campaign": "-omen-Studio Sports",
+            "value": 29.49,
+            "type": "high"
+          },
+          {
+            "campaign": "Women | Studio Sports",
+            "value": 27.62,
+            "type": "high"
+          },
+          {
+            "campaign": "women | studio sports",
+            "value": 31.23,
+            "type": "high"
+          },
+          {
+            "campaign": "Women_|_Studio_Sports",
+            "value": 65.09,
+            "type": "high"
+          },
+          {
+            "campaign": "Women_|_Studio_Sports",
+            "value": 32.49,
+            "type": "high"
+          },
+          {
+            "campaign": "Women | Studio Sports",
+            "value": 47.05,
+            "type": "high"
+          },
+          {
+            "campaign": "women | studio sports",
+            "value": 29.23,
+            "type": "high"
+          },
+          {
+            "campaign": "Women | Studio Sports",
+            "value": 31.31,
+            "type": "high"
+          },
+          {
+            "campaign": "women | studio sports",
+            "value": 58.47,
+            "type": "high"
+          },
+          {
+            "campaign": "Women | Studio Sports",
+            "value": 43.26,
+            "type": "high"
+          },
+          {
+            "campaign": "women | studio sports",
+            "value": 39.7,
+            "type": "high"
+          },
+          {
+            "campaign": "Women | Studio Sports",
+            "value": 39.01,
+            "type": "high"
+          },
+          {
+            "campaign": "WOMEN | STUDIO SPORTS",
+            "value": 145.26,
+            "type": "high"
+          },
+          {
+            "campaign": "W men-Studio Sports",
+            "value": 38.05,
+            "type": "high"
+          },
+          {
+            "campaign": "Women | Stu-io Sports",
+            "value": 24.78,
+            "type": "high"
+          },
+          {
+            "campaign": "Women-Studio Sports",
+            "value": 30.0,
+            "type": "high"
+          },
+          {
+            "campaign": "Women | Studio Sports",
+            "value": 52.62,
+            "type": "high"
+          },
+          {
+            "campaign": "Women | Studio Sports",
+            "value": 34.9,
+            "type": "high"
+          },
+          {
+            "campaign": "Women-Studio-Sports",
+            "value": 41.07,
+            "type": "high"
+          },
+          {
+            "campaign": "Women-Studio Spots",
+            "value": 28.34,
+            "type": "high"
+          },
+          {
+            "campaign": "Women | Studio Sports",
+            "value": 33.48,
+            "type": "high"
+          },
+          {
+            "campaign": "Women | Studio Sports",
+            "value": 34.21,
+            "type": "high"
+          }
+        ]
+      }
+    },
+    "task_2": {
+      "hypotheses": [
+        {
+          "id": "hyp_1",
+          "title": "Creative Fatigue",
+          "description": "Ad creatives showing declining engagement over time",
+          "confidence": 0.75,
+          "evidence": [
+            "CTR dropped significantly over campaign duration"
+          ],
+          "severity": "high"
+        }
+      ],
+      "primary_cause": "hyp_1",
+      "recommended_actions": [
+        "Refresh creative messaging",
+        "Test new ad formats"
+      ]
+    },
+    "task_3": {
+      "validated_hypotheses": [
+        {
+          "hypothesis_id": "hyp_1",
+          "title": "Creative Fatigue",
+          "validation_score": 0.7,
+          "metrics": {
+            "correlation": -0.3,
+            "p_value": 0.05,
+            "sample_size": 4500,
+            "fatigue_indicator": true,
+            "ctr_drop": -0.005860000000000002
+          },
+          "is_valid": true,
+          "strength": "medium"
+        }
+      ],
+      "validation_confidence": 0.7,
+      "recommendation": {
+        "action": "Refresh ad creatives with new messaging",
+        "priority": "medium",
+        "expected_impact": "+10-20% performance improvement"
+      }
+    },
+    "task_4": [
+      {
+        "hypotheses": [
+          {
+            "id": "hyp_1",
+            "title": "Creative Fatigue",
+            "description": "Ad creatives showing declining engagement over time",
+            "confidence": 0.75,
+            "evidence": [
+              "CTR dropped significantly over campaign duration"
+            ],
+            "severity": "high"
+          }
+        ],
+        "primary_cause": "hyp_1",
+        "recommended_actions": [
+          "Refresh creative messaging",
+          "Test new ad formats"
+        ],
+        "campaign_name": " OMEN COTTON CLASSICS",
+        "id": " OMEN COTTON CLASSICS_1"
+      },
+      {
+        "hypotheses": [
+          {
+            "id": "hyp_1",
+            "title": "Creative Fatigue",
+            "description": "Ad creatives showing declining engagement over time",
+            "confidence": 0.75,
+            "evidence": [
+              "CTR dropped significantly over campaign duration"
+            ],
+            "severity": "high"
+          }
+        ],
+        "primary_cause": "hyp_1",
+        "recommended_actions": [
+          "Refresh creative messaging",
+          "Test new ad formats"
+        ],
+        "campaign_name": " omen Summer Invisible",
+        "id": " omen Summer Invisible_1"
+      },
+      {
+        "hypotheses": [
+          {
+            "id": "hyp_1",
+            "title": "Creative Fatigue",
+            "description": "Ad creatives showing declining engagement over time",
+            "confidence": 0.75,
+            "evidence": [
+              "CTR dropped significantly over campaign duration"
+            ],
+            "severity": "high"
+          }
+        ],
+        "primary_cause": "hyp_1",
+        "recommended_actions": [
+          "Refresh creative messaging",
+          "Test new ad formats"
+        ],
+        "campaign_name": "M-n Bold Colors Drop",
+        "id": "M-n Bold Colors Drop_1"
+      },
+      {
+        "hypotheses": [
+          {
+            "id": "hyp_1",
+            "title": "Creative Fatigue",
+            "description": "Ad creatives showing declining engagement over time",
+            "confidence": 0.75,
+            "evidence": [
+              "CTR dropped significantly over campaign duration"
+            ],
+            "severity": "high"
+          }
+        ],
+        "primary_cause": "hyp_1",
+        "recommended_actions": [
+          "Refresh creative messaging",
+          "Test new ad formats"
+        ],
+        "campaign_name": "ME  Signature Soft",
+        "id": "ME  Signature Soft_1"
+      },
+      {
+        "hypotheses": [
+          {
+            "id": "hyp_1",
+            "title": "Creative Fatigue",
+            "description": "Ad creatives showing declining engagement over time",
+            "confidence": 0.75,
+            "evidence": [
+              "CTR dropped significantly over campaign duration"
+            ],
+            "severity": "high"
+          }
+        ],
+        "primary_cause": "hyp_1",
+        "recommended_actions": [
+          "Refresh creative messaging",
+          "Test new ad formats"
+        ],
+        "campaign_name": "ME- PREMIUM MODAL",
+        "id": "ME- PREMIUM MODAL_1"
+      }
+    ]
+  },
+  "end_time": "2025-10-27T14:01:30.387065",
+  "status": "completed"
+}
