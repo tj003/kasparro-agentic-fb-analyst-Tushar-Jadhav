@@ -86,8 +86,47 @@ class Orchestrator:
                 results[task.id] = task_result
                 self.execution_log["results"][task.id] = task_result
             
-            # Compile final report
+            # Compile initial report
             report = self._compile_report(query, results, df)
+
+            # Reflection loop: if confidence below threshold, retry with refinement
+            try:
+                thresholds = self.config.get("thresholds", {})
+                min_conf = thresholds.get("confidence_threshold", 0.6)
+                validation = report.get("validated_insights", {})
+                confidence = float(validation.get("validation_confidence", 0.0))
+                if confidence < min_conf:
+                    before_conf = confidence
+                    before_hyps = report.get("insights", {}).get("hypotheses", [])
+                    self._log_reflection_event(
+                        stage="pre_retry",
+                        reason=f"confidence {before_conf:.2f} < threshold {min_conf:.2f}",
+                        hypotheses=before_hyps,
+                        recommendations=report.get("recommendations", []),
+                    )
+
+                    # Regenerate insights with a refined query prompt
+                    refined_query = f"{query} — focus on specific drivers (creative fatigue, audience drop, budget shifts)." \
+                                    f" Provide tighter hypotheses with explicit evidence and numeric deltas."
+                    data_summary = results.get("data_summary") or self.data_agent.analyze(df)
+                    refined_insights = self.insight_agent.generate_insights(data_summary, refined_query)
+                    refined_validated = self.evaluator_agent.evaluate(refined_insights, data_summary)
+
+                    # Update results and recompile report
+                    results["insights"] = refined_insights
+                    results["evaluation"] = refined_validated
+                    report = self._compile_report(query, results, df)
+
+                    after_conf = float(report.get("validated_insights", {}).get("validation_confidence", 0.0))
+                    after_hyps = report.get("insights", {}).get("hypotheses", [])
+                    self._log_reflection_delta(
+                        before_confidence=before_conf,
+                        after_confidence=after_conf,
+                        before_hypotheses=before_hyps,
+                        after_hypotheses=after_hyps,
+                    )
+            except Exception as reflection_err:
+                logger.warning(f"Reflection loop skipped due to error: {reflection_err}")
             
             self.execution_log["end_time"] = datetime.now().isoformat()
             self.execution_log["status"] = "completed"
@@ -102,7 +141,17 @@ class Orchestrator:
             raise
     
     def _load_data(self, data_path: str) -> pd.DataFrame:
-        """Load and preprocess the data."""
+        """Load and preprocess the data.
+        Respects DATA_CSV environment variable if present.
+        """
+        # Prefer explicit env var if provided
+        env_csv = os.getenv("DATA_CSV")
+        if env_csv and os.path.exists(env_csv):
+            logger.info(f"Using DATA_CSV from environment: {env_csv}")
+            df = pd.read_csv(env_csv)
+            logger.info(f"Loaded data with columns: {df.columns.tolist()}")
+            return df
+
         if not os.path.exists(data_path):
             logger.warning(f"Data file not found: {data_path}. Creating sample data.")
             return self._create_sample_data()
@@ -110,6 +159,45 @@ class Orchestrator:
         df = pd.read_csv(data_path)
         logger.info(f"Loaded data with columns: {df.columns.tolist()}")
         return df
+
+    def _log_reflection_event(self, stage: str, reason: str, hypotheses: List[Dict[str, Any]], recommendations: List[Dict[str, Any]]):
+        """Write a reflection loop event to a dedicated log file."""
+        os.makedirs("logs", exist_ok=True)
+        path = os.path.join("logs", "reflection_example.log")
+        entry = {
+            "timestamp": datetime.now().isoformat(),
+            "stage": stage,
+            "reason": reason,
+            "hypotheses_titles": [h.get("title", "") for h in (hypotheses or [])],
+            "recommendations": recommendations or [],
+        }
+        with open(path, "a", encoding="utf-8") as f:
+            f.write(json.dumps(entry) + "\n")
+
+    def _log_reflection_delta(
+        self,
+        before_confidence: float,
+        after_confidence: float,
+        before_hypotheses: List[Dict[str, Any]],
+        after_hypotheses: List[Dict[str, Any]],
+    ):
+        """Log what changed after the retry pass."""
+        os.makedirs("logs", exist_ok=True)
+        path = os.path.join("logs", "reflection_example.log")
+        before_titles = [h.get("title", "") for h in (before_hypotheses or [])]
+        after_titles = [h.get("title", "") for h in (after_hypotheses or [])]
+        delta = {
+            "timestamp": datetime.now().isoformat(),
+            "stage": "post_retry",
+            "confidence_before": round(before_confidence, 4),
+            "confidence_after": round(after_confidence, 4),
+            "hypotheses_before": before_titles,
+            "hypotheses_after": after_titles,
+            "added_hypotheses": [t for t in after_titles if t not in before_titles],
+            "removed_hypotheses": [t for t in before_titles if t not in after_titles],
+        }
+        with open(path, "a", encoding="utf-8") as f:
+            f.write(json.dumps(delta) + "\n")
     
     def _create_sample_data(self) -> pd.DataFrame:
         """Create sample data for testing."""

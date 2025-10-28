@@ -9,6 +9,7 @@ from loguru import logger
 from rich.console import Console
 from rich.panel import Panel
 from rich.text import Text
+from pathlib import Path
 
 import sys
 sys.path.insert(0, '..' if sys.path[0] != '' else '.')
@@ -31,6 +32,15 @@ def setup_logging():
     )
 
 
+def resolve_default_paths():
+    """Resolve config and data default paths relative to project root."""
+    script_dir = Path(__file__).resolve().parent
+    project_root = script_dir.parent
+    default_config = str(project_root / "config" / "config.yaml")
+    default_data = str(project_root / "data" / "sample_fb_ads.csv")
+    return default_config, default_data
+
+
 def main():
     """Main entry point."""
     parser = argparse.ArgumentParser(
@@ -43,16 +53,19 @@ def main():
         default="Analyze ROAS drop",
         help="Business query/question to analyze"
     )
+
+    default_config, default_data = resolve_default_paths()
+
     parser.add_argument(
         "--data",
         type=str,
-        default="../data/sample_fb_ads.csv",
+        default=default_data,
         help="Path to data file"
     )
     parser.add_argument(
         "--config",
         type=str,
-        default="../config/config.yaml",
+        default=default_config,
         help="Path to configuration file"
     )
     

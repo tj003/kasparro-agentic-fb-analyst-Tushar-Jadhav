@@ -3,14 +3,14 @@
 ## Query
 Analyze ROAS drop
 
-**Analysis Date:** 2025-10-27T13:50:30.045945
+**Analysis Date:** 2025-10-28T13:29:51.046226
 
 ---
 
 ## Executive Summary
 
-**Total Records Analyzed:** 250  
-**Total Campaigns:** 5  
+**Total Records Analyzed:** 4500  
+**Total Campaigns:** 367  
 **Status:** completed
 
 ---

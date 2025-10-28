@@ -20,9 +20,9 @@
         "metrics": {
           "correlation": -0.3,
           "p_value": 0.05,
-          "sample_size": 250,
+          "sample_size": 4500,
           "fatigue_indicator": true,
-          "ctr_drop": -0.0020228431066108173
+          "ctr_drop": -0.005860000000000002
         },
         "is_valid": true,
         "strength": "medium"
