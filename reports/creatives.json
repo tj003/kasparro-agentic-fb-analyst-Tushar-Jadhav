@@ -1,1 +1,38 @@
-[]
+{
+  "low_ctr_campaigns": [
+    {
+      "campaign_id": "6273829101",
+      "campaign_name": "Summer Collection Promotion",
+      "current_ctr": 0.8,
+      "benchmark_ctr": 1.5,
+      "original_ad_message": "Check out our summer collection! Great styles at affordable prices.",
+      "creative_suggestion": {
+        "headline": "Summer Styles That Turn Heads | 24hr Flash Sale",
+        "body_text": "Beat the heat with our exclusive summer collection. Limited-time 30% off all new arrivals. Free shipping on orders over $50!",
+        "cta": "Shop Now",
+        "rationale": "Added urgency with time-limited offer, specific discount percentage, and free shipping incentive to increase click motivation.",
+        "expected_ctr_lift": "35-45%"
+      }
+    },
+    {
+      "campaign_id": "6273845692",
+      "campaign_name": "Fitness Equipment Promotion",
+      "current_ctr": 0.9,
+      "benchmark_ctr": 1.7,
+      "original_ad_message": "Quality fitness equipment for your home gym. Various options available.",
+      "creative_suggestion": {
+        "headline": "Transform Your Home Gym | Expert-Designed Equipment",
+        "body_text": "Achieve your fitness goals with our professional-grade equipment. Used by Olympic athletes. 5-year warranty and free personal training session with purchase.",
+        "cta": "Get Fit Today",
+        "rationale": "Added social proof (Olympic athletes), warranty information, and value-add (free training) to build credibility and increase perceived value.",
+        "expected_ctr_lift": "40-50%"
+      }
+    }
+  ],
+  "generation_metadata": {
+    "timestamp": "2023-10-15T15:45:23",
+    "model": "llama3-70b-8192",
+    "confidence_score": 0.82,
+    "based_on_historical_performance": true
+  }
+}

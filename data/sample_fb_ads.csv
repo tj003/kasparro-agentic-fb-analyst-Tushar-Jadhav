@@ -1,0 +1,16 @@
+campaign_id,campaign_name,ad_set_id,ad_set_name,ad_id,ad_name,date,impressions,clicks,spend,conversions,ctr,cpc,cpm,roas
+6273829101,Summer Collection Promotion,5123456789,Summer Collection - Lookalike,4123456789,Summer Collection Ad 1,2023-09-01,12500,100,250.00,5,0.80,2.50,20.00,2.5
+6273829101,Summer Collection Promotion,5123456789,Summer Collection - Lookalike,4123456790,Summer Collection Ad 2,2023-09-02,13000,110,260.00,6,0.85,2.36,20.00,2.8
+6273829101,Summer Collection Promotion,5123456789,Summer Collection - Lookalike,4123456791,Summer Collection Ad 3,2023-09-03,11000,85,220.00,4,0.77,2.59,20.00,2.2
+6273829101,Summer Collection Promotion,5123456790,Summer Collection - Interest,4123456792,Summer Collection Ad 1,2023-09-01,9500,75,190.00,3,0.79,2.53,20.00,1.9
+6273829101,Summer Collection Promotion,5123456790,Summer Collection - Interest,4123456793,Summer Collection Ad 2,2023-09-02,10000,80,200.00,4,0.80,2.50,20.00,2.4
+6273845692,Fitness Equipment Promotion,5123456791,Fitness - Lookalike,4123456794,Fitness Equipment Ad 1,2023-09-01,15000,135,300.00,7,0.90,2.22,20.00,2.9
+6273845692,Fitness Equipment Promotion,5123456791,Fitness - Lookalike,4123456795,Fitness Equipment Ad 2,2023-09-02,14500,130,290.00,6,0.90,2.23,20.00,2.6
+6273845692,Fitness Equipment Promotion,5123456791,Fitness - Lookalike,4123456796,Fitness Equipment Ad 3,2023-09-03,16000,145,320.00,8,0.91,2.21,20.00,3.1
+6273845692,Fitness Equipment Promotion,5123456792,Fitness - Interest,4123456797,Fitness Equipment Ad 1,2023-09-01,12000,108,240.00,5,0.90,2.22,20.00,2.5
+6273845692,Fitness Equipment Promotion,5123456792,Fitness - Interest,4123456798,Fitness Equipment Ad 2,2023-09-02,12500,112,250.00,6,0.90,2.23,20.00,2.9
+6273856543,Fall Fashion Collection,5123456793,Fall Fashion - Lookalike,4123456799,Fall Fashion Ad 1,2023-09-01,18000,270,360.00,12,1.50,1.33,20.00,4.2
+6273856543,Fall Fashion Collection,5123456793,Fall Fashion - Lookalike,4123456800,Fall Fashion Ad 2,2023-09-02,17500,262,350.00,11,1.50,1.34,20.00,3.9
+6273856543,Fall Fashion Collection,5123456793,Fall Fashion - Lookalike,4123456801,Fall Fashion Ad 3,2023-09-03,19000,285,380.00,13,1.50,1.33,20.00,4.3
+6273856543,Fall Fashion Collection,5123456794,Fall Fashion - Interest,4123456802,Fall Fashion Ad 1,2023-09-01,14000,210,280.00,9,1.50,1.33,20.00,3.9
+6273856543,Fall Fashion Collection,5123456794,Fall Fashion - Interest,4123456803,Fall Fashion Ad 2,2023-09-02,14500,217,290.00,10,1.50,1.34,20.00,4.1

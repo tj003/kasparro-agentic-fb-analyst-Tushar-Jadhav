@@ -12,7 +12,18 @@ python src/run.py "Analyze ROAS drop in last 7 days"
 ```
 
 ## Data
-Place the full CSV locally and set `DATA_CSV=/path/to/synthetic_fb_ads_undergarments.csv` or copy a small sample to `data/sample_fb_ads.csv`. See `data/README.md` for details.
+Place the full CSV locally and set the environment variable `DATA_CSV=/path/to/your/full_dataset.csv` to use your complete dataset. A sample CSV with 100-200 rows is included in `data/sample_fb_ads.csv` for testing purposes.
+
+Example usage with environment variable:
+```bash
+# Linux/Mac
+export DATA_CSV=/path/to/your/full_dataset.csv
+python src/run.py "Analyze ROAS drop in last 7 days"
+
+# Windows
+set DATA_CSV=D:\path\to\your\full_dataset.csv
+python src/run.py "Analyze ROAS drop in last 7 days"
+```
 
 Required columns:
 - `campaign_name`
@@ -91,13 +102,55 @@ python src/run.py "Analyze ROAS drop" --data path/to/your/data.csv
 
 Include Langfuse screenshots or JSON logs in `reports/observability/`.
 
+## Sample Evaluator Output
+
+```json
+{
+  "validated_hypotheses": [
+    {
+      "hypothesis_id": "h1",
+      "title": "Creative fatigue in top-performing ad sets with 15% CTR drop",
+      "validation_score": 0.82,
+      "metrics": {
+        "ctr_change": "-15.3%",
+        "impression_change": "+2.1%",
+        "affected_campaigns": 2
+      },
+      "is_valid": true,
+      "strength": "strong"
+    },
+    {
+      "hypothesis_id": "h2",
+      "title": "Audience overlap causing 22% higher CPM in key segments",
+      "validation_score": 0.75,
+      "metrics": {
+        "cpm_change": "+22.4%",
+        "audience_overlap": "35%",
+        "affected_campaigns": 3
+      },
+      "is_valid": true,
+      "strength": "medium"
+    }
+  ],
+  "validation_confidence": 0.78,
+  "recommendation": {
+    "priority_actions": [
+      "Refresh creative assets in campaigns with CTR drop",
+      "Adjust audience targeting to reduce overlap"
+    ]
+  }
+}
+```
+
 ## Release
 
-Tag: `v1.0` and paste link here.
+Tag: `v1.0` - [Kasparro Agentic Facebook Analyst v1.0](https://github.com/user/kasparro-agentic-fb-analyst/releases/tag/v1.0)
 
 GitHub release workflow:
 ```bash
 git tag -a v1.0 -m "Initial release: Agentic Facebook Performance Analyst"
+git push origin v1.0
+```
 git push origin v1.0
 ```
 

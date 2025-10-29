@@ -1,0 +1,124 @@
+{
+  "schema": {
+    "title": "Structured Reasoning Prompt",
+    "type": "object",
+    "required": ["context", "task", "output_format"],
+    "properties": {
+      "context": {
+        "type": "object",
+        "description": "Background information for the task",
+        "required": ["data_summary", "business_query"],
+        "properties": {
+          "data_summary": {
+            "type": "object",
+            "description": "Summary statistics of the Facebook ads data"
+          },
+          "business_query": {
+            "type": "string",
+            "description": "The business question being analyzed"
+          }
+        }
+      },
+      "task": {
+        "type": "string",
+        "description": "The specific task to be performed"
+      },
+      "output_format": {
+        "type": "object",
+        "description": "Expected structure of the response",
+        "required": ["hypotheses", "recommendations"],
+        "properties": {
+          "hypotheses": {
+            "type": "array",
+            "description": "List of hypotheses about the data",
+            "items": {
+              "type": "object",
+              "required": ["id", "title", "evidence", "confidence"],
+              "properties": {
+                "id": {"type": "string"},
+                "title": {"type": "string"},
+                "evidence": {"type": "string"},
+                "confidence": {"type": "number", "minimum": 0, "maximum": 1}
+              }
+            }
+          },
+          "recommendations": {
+            "type": "array",
+            "description": "List of actionable recommendations",
+            "items": {
+              "type": "object",
+              "required": ["id", "title", "rationale", "expected_impact"],
+              "properties": {
+                "id": {"type": "string"},
+                "title": {"type": "string"},
+                "rationale": {"type": "string"},
+                "expected_impact": {"type": "string"}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "reasoning_flow": {
+    "think": {
+      "description": "Analyze the data summary and business query",
+      "steps": [
+        "Identify key metrics and their trends",
+        "Look for anomalies or significant changes",
+        "Consider potential causes for performance issues",
+        "Evaluate relationships between different metrics"
+      ]
+    },
+    "analyze": {
+      "description": "Develop and test hypotheses",
+      "steps": [
+        "Formulate specific hypotheses about performance drivers",
+        "Gather evidence from the data to support or refute each hypothesis",
+        "Quantify the impact of each hypothesis",
+        "Assign confidence levels based on evidence strength"
+      ]
+    },
+    "conclude": {
+      "description": "Generate actionable recommendations",
+      "steps": [
+        "Prioritize hypotheses based on confidence and impact",
+        "Develop specific, actionable recommendations",
+        "Estimate expected impact of each recommendation",
+        "Provide clear rationale linking recommendations to hypotheses"
+      ]
+    }
+  },
+  "example_prompt": {
+    "context": {
+      "data_summary": {
+        "campaign_count": 12,
+        "total_spend": 45000,
+        "avg_ctr": 1.2,
+        "avg_cpc": 0.75,
+        "top_performing_campaigns": ["Campaign A", "Campaign B"],
+        "underperforming_campaigns": ["Campaign X", "Campaign Y"]
+      },
+      "business_query": "Why has our ROAS decreased by 15% in the last month?"
+    },
+    "task": "Analyze the data and generate hypotheses about the ROAS decrease, then provide actionable recommendations.",
+    "output_format": {
+      "hypotheses": [
+        {
+          "id": "h1",
+          "title": "Creative fatigue in top campaigns",
+          "evidence": "CTR dropped 22% in Campaign A while impressions remained stable",
+          "confidence": 0.85
+        }
+      ],
+      "recommendations": [
+        {
+          "id": "r1",
+          "title": "Refresh creative assets in Campaign A",
+          "rationale": "Campaign A shows signs of creative fatigue with declining CTR",
+          "expected_impact": "15-20% CTR improvement based on historical refreshes"
+        }
+      ]
+    }
+  }
+}
